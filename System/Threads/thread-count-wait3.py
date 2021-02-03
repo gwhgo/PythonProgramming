@@ -14,7 +14,7 @@ def counter(myId, count, mutex):
 for i in range(numthreads):
     thread.start_new_thread(counter, (i, 5, stdoutmutex))
 
-while not all(mutex.locked() for mutex in exitmutexes): 
+while not all(mutex.locked() for mutex in exitmutexes):
     time.sleep(0.25)
     print('wait...')
 

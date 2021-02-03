@@ -9,6 +9,5 @@ for i in range(5):
     thread.start_new_thread(counter,(i,5))
 
 
-time.sleep(6)
+# time.sleep(6)
 print('Main thread exiting.')
-

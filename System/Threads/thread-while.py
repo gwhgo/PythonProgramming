@@ -1,5 +1,5 @@
 import threading,time
-import _thread 
+import _thread
 
 def client(numId):
     while True:
@@ -8,8 +8,8 @@ def client(numId):
 
 for i in range(10):
     # Note: This will cause endless loop in the first thread
-    threading.Thread(target=client,args=(i,)).run()
+    threading.Thread(target=client,args=(i,)).start()
 
-    _thread.start_new_thread(client,(i,))
+    # _thread.start_new_thread(client,(i,))
 
 #time.sleep(10)

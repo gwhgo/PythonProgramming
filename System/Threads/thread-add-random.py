@@ -4,11 +4,11 @@ count = 0
 def adder():
     global count
     count = count + 1
-    time.sleep(0.5)
+    # time.sleep(0.5)
     count = count + 1
 
-threads = [] 
-for i in range(1000):
+threads = []
+for i in range(10000):
     thread = threading.Thread(target=adder,args=())
     thread.start()
     threads.append(thread)
